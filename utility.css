@@ -1,0 +1,11 @@
+.flex{
+    display: flex;
+    
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.space_bet{
+    justify-content: space-between;
+}
