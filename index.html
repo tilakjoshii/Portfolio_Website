@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="tilak's portflio webpage">
+    <meta name="keyword" content="tilak,Tilak,Joshi,joshi,Graphics,Digital,Marketing">
+    <meta name="auther" content="Tilak Joshi">
+    
+    <title>Tilak Joshi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="canvas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Ubuntu:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- header design start-->
+    <header class="header flex center">
+        <a href="index.html"><img onmouseout="mmover()" onmouseup="mmover()" onmouseover="mmover()" id="img1"
+                src="./images/logo11.png" alt="Portfolio logo"></a>
+        <a href="index.html"><img id="img2" src="./images/logo12.png" alt="Portflio logo"></a>
+        <i class='bx bx-menu' class="active" id="menu_icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about_me">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#portflio">Portflio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- header design end-->
+    <!-- section1 structure for home start-->
+    <section class="home flex center " id="home">
+        <div class="home_content">
+            <h3> Hello, <span>It's Me</span> </h3>
+            <h1>Tilak Joshi</h1>
+            <h3>And I'm a <span class="typedd"></span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam modi repudiandae ipsam eligendi deserunt
+                tempora mollitia nisi provident veniam iure.</p>
+            <div class="social_account">
+                <a href="https://www.facebook.com/tilak.joshi.5099"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://t.me/tilakjoshi"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.linkedin.com/in/tilak-joshi-337b10241"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <a id="download_cv" class="btn" href="#">Download CV</a>
+
+        </div>
+        <div class="image_design">
+            <img src="./images/img22.png" alt="my image">
+        </div>
+    </section>
+    <!-- section1 structure for home end-->
+    <!-- section2 structure for about me start-->
+    <section class="about_me flex center " style="position: relative;" id="about_me">
+        <div id="part" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="about_image" id="about_image">
+            <img src="./images/myimg1.png" alt="mu image">
+        </div>
+        <div class="about_content" id="about_content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Devloper!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta accusantium soluta ratione quod
+                corrupti vero architecto eaque aliquam ipsum, placeat distinctio tenetur repellendus deserunt blanditiis
+                deleniti non cum dolore facilis odio quas unde esse. Nobis voluptates architecto inventore molestias?
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+    <!-- section2 structure for about me end-->
+    <!-- section3 structure for services start-->
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services_container flex center">
+            <div class="services_box">
+                <i class='bx bxs-paint'></i>
+                <h3>Graphics Design</h3>
+                <p>Lorem ipsum dolor sit amet
+                    delectus facilis adipisci nemo nesciunt est sequi, veniam explicabo temporibus ipsum cum sit itaque
+                    velit! Aliquam, dolor.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services_box">
+                <i class='bx bx-bar-chart-alt'></i>
+                <h3>Digital Markating</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing adipisci nemo nesciunt est sequi, veniam explicabo
+                    temporibus ipsum cum sit
+                    itaque velit! Aliquam, dolor.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services_box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Devlopment</h3>
+                <p>Lorem ipsum dolor sit amet
+                    corrupti delectus facilis adipisci nemo nesciunt est sequi, veniam explicabo temporibus
+                    ipsum cum sit itaque velit! Aliquam, dolor.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- section3 structure for services end-->
+    <!-- section4 structure for portflio  start-->
+
+    <section class="portflio" id="portflio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portflio_container">
+            <div class="portflio_box">
+                <img src="./images/bg1.jpg" alt="bg image">
+                <div class="portflio_content flex center">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portflio_box">
+                <img src="./images/bg1.jpg" alt="bg image">
+                <div class="portflio_content flex center">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portflio_box">
+                <img src="./images/bg1.jpg" alt="bg image">
+                <div class="portflio_content flex center">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portflio_box">
+                <img src="./images/bg1.jpg" alt="bg image">
+                <div class="portflio_content flex center">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portflio_box">
+                <img src="./images/bg1.jpg" alt="bg image">
+                <div class="portflio_content flex center">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portflio_box">
+                <img src="./images/bg1.jpg" alt="bg image">
+                <div class="portflio_content flex center">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section4 structure for portflio  end-->
+    <!-- section4 structure for contact  start-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form onsubmit="sendmail(); reset(); return false;">
+            <div class="input_container">
+                <input type="text" id="name" name="name" placeholder="Full Name" required><span class="error"
+                    id="message1"></span>
+                <input type="number" id="number" name="mobile" placeholder="Mobile Number" required><span class="error"
+                    id="message2"></span>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <input type="text" id="subject" name="email_object" placeholder="Email Object">
+            </div>
+            <textarea name="feedback" id="text" cols="30" rows="10"></textarea>
+            <!-- <input type="submit"class="btnn" value="Send Message"> -->
+            <button type="submit" class="btnn" onclick="return validate();">Send Message</button><span class="error"
+                id="message" class="error" style="display: block; margin-top: .5rem; font-size: .9rem; color: green;"></span>
+        </form>
+    </section>
+    <!-- section4 structure for contact end-->
+    <!-- footer design start-->
+    <footer class="footer" id="footer">
+        <div class="reverse flex">
+            <!-- <div class="footer_text"> -->
+            <p id="p1">Copyright &copy; 2023 by Tilak | All Rights Reserved.</p>
+            <!-- </div> -->
+            <!-- <div class="visit"> -->
+            <p id="p2">Thanks For Visiting &nbsp;<i class="fa-solid fa-heart heart"></i></p>
+            <!-- </div> -->
+        </div>
+        <div class="footer_icontop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <!-- footer design end-->
+
+    <!--javascript start-->
+    <!--scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--typed js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--another js-->
+    <script src="javasc.js">
+
+    </script>
+    <script src="canvas.js">
+
+    </script>
+    <!--javascript end-->
+
+    <!-- smtp js  -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendmail() {
+            ClearError();
+            var body1 = "Name :" + document.getElementById("name").value +
+                " <br> Email Address :" + document.getElementById("email").value +
+                " <br> Mobile Number :" + document.getElementById("number").value +
+                " <br> Secondary Subject :" + document.getElementById("subject").value +
+                " <br> Feedback :" + document.getElementById("text").value;
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "tilaktilakjoshi@gmail.com",
+                Password: "5B69B3E4AD43C58ECD09C20F7CCBAEE89278",
+                To: 'tapinjoshimnr@gmail.com',
+                From: "tilaktilakjoshi@gmail.com",
+                Subject: "Contact ME Form FIll",
+                Body: body1
+            }).then(
+                message => alert(message +"send successfully")
+            );
+            seterror("message", "send successfully");
+        }
+
+
+        // form validation start******************************
+        function ClearError() {
+            errors = document.getElementsByClassName('error');
+            for (const item of errors) {
+                item.innerHTML = "";
+            }
+        }
+
+        function seterror(id, error) {
+            document.getElementById(id).innerHTML = error;
+            // element.getElementsByClassName('error')[0].innerHTML=error;
+
+        }
+
+        function validate() {
+            var returnval = true;
+            ClearError();
+            var name = document.getElementById('name').value;
+            let reg1 = /^[A-Za-z ]+$/;
+            if (name.match(reg1) && name.length > 5) {
+                returnval = true;
+            }
+            else {
+                seterror("message1", "*enter correct name");
+                returnval = false;
+
+            }
+
+            var number = document.getElementById('number').value;
+            if (number.length > 5 && number.length <= 10) {
+                returnval = true;
+            }
+            else {
+                seterror("message2", "*enter correct number");
+                returnval = false;
+            }
+            return returnval;
+        }
+
+
+    </script>
+</body>
+
+</html>
