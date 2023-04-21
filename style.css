@@ -7,10 +7,10 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-   font-family: "Comfortaa", cursive; 
-  /* font-style: italic;
+  /* font-family: "Comfortaa", cursive; 
+  font-style: italic;
   font-family: cursive; */
-color:red;
+ font-family: 'Handlee', cursive;
 }
 
 :root{
