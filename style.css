@@ -8,8 +8,8 @@
     outline: none;
     scroll-behavior: smooth;
 
-  /* font-family: "Comfortaa", cursive; 
-  font-style: italic;
+   font-family: "Comfortaa", cursive; 
+  /* font-style: italic;
   font-family: cursive; 
  font-family: 'Handlee', cursive; */
 }
@@ -508,6 +508,9 @@ font-size: 2rem;
 
 @media(max-width:550px){
      /* *************************validation error part style media query************************** */
+*{
+font-family: "Comfortaa", cursive;
+}
 
 #message1{
     position: absolute;
