@@ -29,7 +29,7 @@ body{
     width: 5vw;
 } 
 .header #img2{
-    margin-left: -24rem;
+    margin-left: -20rem;
     width: 10vw;
     display: none;
     transition: 5s;
