@@ -8,10 +8,10 @@
     outline: none;
     scroll-behavior: smooth;
 
-   font-family: "Comfortaa", cursive; 
-  /* font-style: italic;
-  font-family: cursive; 
- font-family: 'Handlee', cursive;*/
+   /*font-family: "Comfortaa", cursive; 
+  font-style: italic;
+  font-family: cursive; */
+ font-family: 'Handlee', cursive;
 }
 
 :root{
