@@ -510,8 +510,8 @@ font-size: 2rem;
 @media(max-width:550px){
      /* *************************validation error part style media query************************** */
 *{
-font-family: "Poppins";
- /*font-family: 'Handlee', cursive;*/
+/* font-family: "Poppins"; */
+ font-family: 'Handlee', cursive;
 }
 
 #message1{
