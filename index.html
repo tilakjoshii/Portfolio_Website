@@ -175,7 +175,7 @@
                 <input type="number" id="number" name="mobile" placeholder="Mobile Number" required><span class="error"
                     id="message2"></span>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
-                <input type="text" id="subject" name="email_object" placeholder="Email Object">
+                <input type="text" id="subject" name="email_subject" placeholder="Email Object">
             </div>
             <textarea name="feedback" id="text" cols="30" rows="10"></textarea>
             <!-- <input type="submit"class="btnn" value="Send Message"> -->
@@ -226,13 +226,14 @@
                 " <br> Mobile Number :" + document.getElementById("number").value +
                 " <br> Secondary Subject :" + document.getElementById("subject").value +
                 " <br> Feedback :" + document.getElementById("text").value;
+            var sub = document.getElementById("subject").value;
             Email.send({
                 Host: "smtp.elasticemail.com",
                 Username: "tilakjoshibaitadi@gmail.com",
                 Password: "F51BA9328599A19AA18F5E72328F6DE5B075",
                 To: 'tapinjoshimnr@gmail.com',
                 From: "tilakjoshibaitadi@gmail.com",
-                Subject: "Contact ME Form FIll",
+                Subject: sub,
                 Body: body1
             }).then(
                 message => alert(message +"send successfully")
