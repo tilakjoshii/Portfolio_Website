@@ -226,26 +226,17 @@
                 " <br> Mobile Number :" + document.getElementById("number").value +
                 " <br> Secondary Subject :" + document.getElementById("subject").value +
                 " <br> Feedback :" + document.getElementById("text").value;
-            // Email.send({
-            //     Host: "smtp.elasticemail.com",
-            //     Username: "tilaktilakjoshi@gmail.com",
-            //     Password: "ftsvtvxqexmprgsf",
-            //     To: 'tapinjoshimnr@gmail.com',
-            //     From: "tilaktilakjoshi@gmail.com",
-            //     Subject: "Contact ME Form FIll",
-            //     Body: body1
-            // }).then(
-            //     message => alert(message +"send successfully")
-            // );
             Email.send({
-    SecureToken : "d33f5a71-1203-4fd1-b574-ad66ae593f02",
-    To : 'tilaktilakjoshi@gmail.com',
-    From : "tapinjoshimnr@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+                Host: "smtp.elasticemail.com",
+                Username: "tilaktilakjoshi@gmail.com",
+                Password: "iziqfrzklsydqrwn",
+                To: 'tapinjoshimnr@gmail.com',
+                From: "tilaktilakjoshi@gmail.com",
+                Subject: "Contact ME Form FIll",
+                Body: body1
+            }).then(
+                message => alert(message +"send successfully")
+            );
             seterror("message", "send successfully");
         }
 
