@@ -255,7 +255,8 @@ margin: 1rem 0 3rem;
     display: flex;
 }
 .portflio_box img{
-    width: 100%;
+    width: 400px;
+    height: 200px;
     transition: 0.5s ease;
 }
 .portflio_box:hover img{
