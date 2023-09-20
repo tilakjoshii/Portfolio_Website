@@ -585,7 +585,7 @@ font-size: 2rem;
     bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 90%;
+    height: 100%;
     background: linear-gradient(rgba(0,0,0,.1),var(--main_color));
     flex-direction: column;
     text-align: center;
