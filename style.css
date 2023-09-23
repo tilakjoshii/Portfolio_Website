@@ -380,6 +380,12 @@ margin: 1rem 0 3rem;
     margin-bottom: 1rem;
     /* border-left: 4px solid green; */
 }
+#MyCon div a{
+color: var(--text_color);
+}
+#MyCon div a:hover{
+    color: var(--main_color);
+}
 #MyCon div{
     text-align: center;
     justify-content: center;
