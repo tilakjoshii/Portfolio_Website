@@ -303,11 +303,16 @@ margin: 1rem 0 3rem;
 }
 
 /* *******************contact section css start********************* */
+#condiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .contact h2{
     margin-bottom: 3rem;
 }
 .contact form{
-    max-width: 60rem;
+    max-width: 45rem;
     margin:1rem auto;
     text-align: center;
     margin-bottom: 3rem;
@@ -355,6 +360,32 @@ margin: 1rem 0 3rem;
 }
 .contact form textarea{
     resize: none;
+        height: 11rem;
+}
+#form{
+    box-shadow: rgba(171, 178, 185, 0.2) 0px 8px 24px;
+    padding: 1rem;
+    height: 60vh;
+    border-radius: 1rem;
+
+}
+#MyCon{
+    box-shadow: rgba(171, 178, 185, 0.2) 0px 8px 24px;
+    border-radius: 1rem;
+    height: 60vh;
+    width: 22vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    /* border-left: 4px solid green; */
+}
+#MyCon div{
+    text-align: center;
+    justify-content: center;
+}
+#MyCon div p{
+    padding: .5rem;
 }
 
 /* *******************footer design css start********************* */
@@ -432,6 +463,19 @@ margin: 1rem 0 3rem;
 
 
 /* *******************responsive css part start********************* */
+@media(max-width:1250px){
+   
+    #MyCon{
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        width: 20rem;
+    }
+    #form{
+        width: 30rem;
+
+    }
+}
 @media(max-width:1050px){
     .portflio_container{
         display: grid;
@@ -439,7 +483,20 @@ margin: 1rem 0 3rem;
         align-items: center;
         gap: 2.5rem;
     } 
-   
+   #condiv{ 
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    #MyCon{
+        
+        height: 30vh;
+        width: 82vw;
+    }
+    .contact form textarea{
+        resize: none;
+        height: 13rem;
+    }
 }
 @media(max-width:750px){
      /* *************************validation error part style media query************************** */
@@ -511,7 +568,13 @@ font-size: 2rem;
 /* font-family: "Poppins"; */
  font-family: 'Handlee', cursive;
 }
-
+ .contact form textarea{
+        resize: none;
+        height: 6rem;
+    }
+    #form{
+        width: 20rem;
+    }
 #message1{
     position: absolute;
     top: 1.4rem;
