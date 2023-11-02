@@ -171,7 +171,7 @@
             <div class="input_container">
                 <input type="text" id="name" name="name" placeholder="Full Name" required><span class="error"
                     id="message1"></span>
-                <input type="number" id="number" name="mobile" placeholder="Mobile Number" required><span class="error"
+                <input type="text" id="number" name="mobile" placeholder="Mobile Number" required><span class="error"
                     id="message2"></span>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
                 <input type="text" id="subject" name="email_subject" placeholder="Email Object">
@@ -235,7 +235,9 @@
                 " <br> Feedback :" + document.getElementById("text").value;
             var sub = document.getElementById("subject").value;
             Email.send({
-                 SecureToken : "581d9673-61f8-43c4-b683-0b8202fd10ed",
+                Host: "smtp.elasticemail.com",
+                Username: "tilakjoshibaitadi@gmail.com",
+                Password: "F51BA9328599A19AA18F5E72328F6DE5B075",
                 To: 'tapinjoshimnr@gmail.com',
                 From: "tilakjoshibaitadi@gmail.com",
                 Subject: sub,
