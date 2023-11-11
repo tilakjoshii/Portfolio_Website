@@ -8,12 +8,14 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
+  
 
    /*font-family: "Comfortaa", cursive; 
   font-style: italic;
   font-family: cursive; */
  font-family: 'Handlee', cursive;
 }
+
 
 :root{
     --bg_color: #1f232e;
@@ -75,7 +77,6 @@ section{
     padding: 6rem 9% 2rem;
 }
 .home_content{
-    
     margin-top: 11vh;
 }
 .home_content h3{
@@ -98,7 +99,7 @@ span{
 .home_content p{
     font-size: 0.9rem;
     line-height: 1.4;
-    width: 90%;
+    width: 80%;
 
 }
 .social_account a{
@@ -238,6 +239,7 @@ margin: 1rem 0 3rem;
 
 
 /* *******************portflio section css start********************* */
+
 .portflio h2{
     margin-bottom: 4rem;
 }
@@ -245,7 +247,9 @@ margin: 1rem 0 3rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
+    
 }
 .portflio_container .portflio_box{
     position: relative;
@@ -253,10 +257,12 @@ margin: 1rem 0 3rem;
     box-shadow: 0 0 1rem var(--bg_color);
     overflow: hidden;
     display: flex;
+    width: 19.5rem;
+    height: 12rem;
+    margin: auto;
 }
 .portflio_box img{
-    width: 400px;
-    height: 200px;
+   width: 100%;
     transition: 0.5s ease;
 }
 .portflio_box:hover img{
@@ -561,7 +567,7 @@ flex-direction: column;
     width: 10vw;
 } 
 #menu_icon{
-font-size: 2rem;
+font-size: rem;
 }
 .services_container{
     flex-direction: column;
@@ -570,10 +576,9 @@ font-size: 2rem;
 
 @media(max-width:550px){
      /* *************************validation error part style media query************************** */
-*{
-/* font-family: "Poppins"; */
- font-family: 'Handlee', cursive;
-}
+ 
+
+  /* *********************************** */
  .contact form textarea{
         resize: none;
         height: 6rem;
@@ -662,4 +667,7 @@ font-size: 2rem;
     transition: 0.5s ease;
 
 
+}
+.portflio_box .portflio_content p{
+width: 80%;
 }
