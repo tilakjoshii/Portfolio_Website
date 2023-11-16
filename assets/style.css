@@ -236,6 +236,42 @@ font-size: 2rem;
 font-size: 0.9rem;
 margin: 1rem 0 3rem;
 }
+/* ***********************skills section3 css sstart********************* */
+
+.skills h2{
+    margin-bottom: 5rem;
+}
+.skills_container{
+gap: 2rem;
+flex-wrap: wrap; 
+}
+.skills_container .skills_box{
+    flex: 1 1 1rem;
+     background-color: var(--seconnd_bg_color);
+     padding: 3rem 2rem 4rem;
+     border-radius: 2rem;
+     text-align:center;
+     border: .2rem solid var(--bg_color);
+     transition: 0.5s ease;
+}
+.skills_container .skills_box:hover{
+    border: .2rem solid var(--main_color);
+    transform: scale(1.02);
+}
+.skills_box i{
+font-size: 5rem;
+color:var(--main_color);
+}
+.skills_box h3{
+font-size: 2rem;
+}
+.skills_box p{
+font-size: 0.9rem;
+margin: 1rem 0 3rem;
+}
+
+
+/* *******************portflio section css start********************* */
 
 
 /* *******************portflio section css start********************* */
