@@ -654,7 +654,7 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
   .skills_container .skills_box {
-    height: 18vh;
+    height: 16vh;
     width: 34vw;
 }
   .skills_container .skills_box .btn {
@@ -670,7 +670,7 @@ span {
   }
   .skills_box p {
     font-size: 0.6rem;
-    margin-top: .4rem;
+    margin-top: .6rem;
   }
   .skills_container .skills_box .skills_logo img {
     margin-right: .5rem;
