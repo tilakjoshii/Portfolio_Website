@@ -654,7 +654,7 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
   .skills_container .skills_box {
-    height: 16vh;
+    height: 15vh;
     width: 34vw;
 }
   .skills_container .skills_box .btn {
