@@ -520,7 +520,7 @@ span {
     width: 20rem;
   }
   #form {
-    width: 30rem;
+    width: 82vw;
     height: auto;
   }
 
@@ -528,7 +528,7 @@ span {
 }
 @media (max-width: 1050px) {
     .skills_container .skills_box {
-        height: 15vh;
+        height: 20vh;
         width: 18vw;
     }
     .skills_container .skills_box .btn {
@@ -655,7 +655,7 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
   .skills_container .skills_box {
-    height: 15vh;
+    height: 16vh;
     width: 34vw;
 }
   .skills_container .skills_box .btn {
@@ -667,15 +667,15 @@ span {
 
 
   .skills_box h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .skills_box p {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     margin-top: .6rem;
   }
   .skills_container .skills_box .skills_logo img {
     margin-right: .5rem;
-    width: 2.3rem;
+    width: 2rem;
 }
   .contact form textarea {
     resize: none;
