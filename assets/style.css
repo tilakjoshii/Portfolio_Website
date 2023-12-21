@@ -681,7 +681,7 @@ span {
     height: 6rem;
   }
   #form {
-    width: 16rem;
+    width: 82vw;
     height: auto;
   }
   #message1 {
@@ -765,3 +765,4 @@ span {
 .portflio_box .portflio_content p {
   width: 80%;
 }
+
