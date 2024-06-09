@@ -1,0 +1,34 @@
+:root {
+    --primary-blue: #0f5288;
+   --primary-black: black;
+    --primary-white: #ffffff;
+    
+}
+
+#particles-js {
+    width: 100%;
+    /* background-color: var(--primary-black); */
+    background-image: url("");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+
+#home-screen .large-block {
+    margin-top: 0.8rem;
+    position: relative;
+    padding: 2rem 2rem 15rem 2rem;
+    border-radius: 2rem;
+    /* background-color: var(--primary-black); */
+    width: 98%;
+}
+
+#particles-js canvas {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
