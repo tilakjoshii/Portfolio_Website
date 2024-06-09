@@ -75,6 +75,7 @@ section {
 }
 .home_content {
   margin-top: 11vh;
+  z-index: 999;
 }
 .home_content h3 {
   font-size: 1.9rem;
