@@ -142,12 +142,12 @@ span {
   cursor: pointer;
   margin-top: 1rem;
 }
+
 .image_design img {
   width: 25vw;
   box-shadow: -0.5rem 0.5rem 0.4rem 0.4rem var(--main_color);
   border-radius: 50%;
   animation: floatimage 4s ease-in-out infinite;
-  z-index: 999;
 }
 @keyframes floatimage {
   0% {
