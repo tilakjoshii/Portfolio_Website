@@ -198,6 +198,7 @@ span {
 .services_container {
   gap: 2rem;
   flex-wrap: wrap;
+  
 }
 .services_container .services_box {
   flex: 1 1 1rem;
