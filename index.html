@@ -391,7 +391,7 @@
     <footer class="footer" id="footer">
         <div class="reverse flex">
             <!-- <div class="footer_text"> -->
-            <p id="p1">Copyright &copy; 2023 by Tilak | All Rights Reserved.</p>
+            <p id="p1">Copyright &copy; <span id="currentYear"></span> by Tilak | All Rights Reserved.</p>
             <!-- </div> -->
             <!-- <div class="visit"> -->
             <p id="p2">
@@ -420,6 +420,7 @@
     <!-- smtp js  -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
         function sendmail() {
             ClearError();
             var body1 =

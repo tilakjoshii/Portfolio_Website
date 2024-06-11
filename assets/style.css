@@ -476,6 +476,9 @@ span {
 /* .footer_icontop a{
     margin-left: 1.5rem;
  } */
+ .reverse p #currentYear{
+  color: var(--text_color);
+ }
 .reverse p i {
   color: rgb(210, 23, 23);
   font-size: 1.8rem;
