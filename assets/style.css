@@ -15,6 +15,118 @@
   /* font-family: "Poppins", cursive; */
     font-family: 'Poppins', sans-serif;
 }
+  .portflio_box {
+       position: relative;
+       overflow: hidden;
+       border-radius: 10px;
+       height: 300px;
+       /* Fixed height for consistent sizing */
+     }
+  
+     .image-slider {
+       position: relative;
+       width: 100%;
+       height: 100%;
+       overflow: hidden;
+     }
+  
+     .image-slider img {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       opacity: 0;
+       transition: opacity 1s ease-in-out;
+       animation: slideShow 12s infinite;
+     }
+  
+     .image-slider img:nth-child(1) {
+       animation-delay: 0s;
+     }
+  
+     .image-slider img:nth-child(2) {
+       animation-delay: 4s;
+     }
+  
+     .image-slider img:nth-child(3) {
+       animation-delay: 8s;
+     }
+  
+     @keyframes slideShow {
+       0% {
+         opacity: 0;
+       }
+  
+       10% {
+         opacity: 1;
+       }
+  
+       30% {
+         opacity: 1;
+       }
+  
+       40% {
+         opacity: 0;
+       }
+  
+       100% {
+         opacity: 0;
+       }
+     }
+  
+     .portflio_content {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       padding: 20px;
+       transform: translateY(100%);
+       transition: transform 0.5s ease;
+     }
+  
+     .portflio_box:hover .portflio_content {
+       transform: translateY(0);
+     }
+  
+     .portflio_content h4 {
+       font-size: 2rem;
+       color: #fff;
+       margin-bottom: 10px;
+     }
+  
+     .portflio_content p {
+       font-size: 1rem;
+       color: #fff;
+       margin-bottom: 15px;
+     }
+  
+     .portflio_content a {
+       display: inline-flex;
+       justify-content: center;
+       align-items: center;
+       width: 40px;
+       height: 40px;
+       background: #fff;
+       border-radius: 50%;
+       color: var(--main-color);
+       font-size: 1.5rem;
+     }
+  
+     .portflio_content a:hover {
+       background: var(--main-color);
+       color: #fff;
+       box-shadow: 0 0 20px var(--main-color);
+     }
+  
+
+
 #about_image_border {
   width: 80vw;
   height: 75vh;

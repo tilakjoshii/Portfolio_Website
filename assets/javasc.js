@@ -50,7 +50,7 @@ ScrollReveal().reveal('.home_content p, .about_content', { origin:'left' });
 
 /* ***********************typed js************** */
 const typed = new Typed('.typedd',{
-    strings: ['Frontend Developer','Backend Developer','Youtuber','Designer'],
+    strings: ['Frontend Developer','Backend Developer','SAP B1 Addon Developer',],
     typeSpeed:100,
     backSpeed:100,
     backDealy:1000,
