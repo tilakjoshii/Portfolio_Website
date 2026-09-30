@@ -10,7 +10,7 @@ He builds business software end to end — from React and Next.js interfaces to
 Node.js APIs, databases, deployment pipelines, and SAP Business One add-ons and
 integrations.
 
-Email: t.joshi.dev@gmail.com
+Email: me@tilakjoshi.com.np
 
 ## Experience
 
