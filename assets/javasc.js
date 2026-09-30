@@ -281,11 +281,11 @@
             setStatus("Message sent successfully — I'll get back to you soon!", true);
             form.reset();
           } else {
-            setStatus("Something went wrong. Please email me directly at t.joshi.dev@gmail.com", false);
+            setStatus("Something went wrong. Please email me directly at me@tilakjoshi.com.np", false);
           }
         })
         .catch(() => {
-          setStatus("Something went wrong. Please email me directly at t.joshi.dev@gmail.com", false);
+          setStatus("Something went wrong. Please email me directly at me@tilakjoshi.com.np", false);
         })
         .finally(() => {
           submitBtn.disabled = false;
