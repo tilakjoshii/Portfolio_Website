@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tilak Joshi — Full-Stack Engineer & SAP B1 Specialist</title>
+    <title>Tilak Joshi — Full-Stack Engineer | SaaS, SAP B1 &amp; Integrations</title>
 
     <meta
       name="description"
-      content="Tilak Joshi — Full-Stack Engineer and SAP B1 Specialist building enterprise ERP add-ons, MERN applications and CI/CD automation."
+      content="Tilak Joshi is a Full-Stack Engineer building SaaS and business integrations: SAP Business One add-ons, web applications, API integrations and DevOps."
     />
     <meta
       name="keywords"
-      content="Tilak Joshi, Full Stack Engineer, SAP B1, SAP Addon Developer, MERN, React, Node.js, .NET, Docker, Jenkins, DevOps, Nepal"
+      content="Tilak Joshi, Full-Stack Engineer, SAP Business One, SAP B1 Add-on, MERN, React, Node.js, SaaS, API Integrations, DevOps, Docker, Nepal"
     />
     <meta name="author" content="Tilak Joshi" />
-    <meta name="theme-color" content="#05080f" />
+    <meta name="theme-color" content="#0b1220" />
 
     <link rel="icon" type="image/x-icon" href="assets/images/profile3.ico" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Tilak Joshi — Full-Stack Engineer & SAP B1 Specialist" />
+    <meta property="og:title" content="Tilak Joshi — Full-Stack Engineer | SaaS, SAP B1 &amp; Integrations" />
     <meta
       property="og:description"
-      content="Enterprise SAP B1 add-ons, MERN stack applications, and DevOps automation. Explore my work, experience and skills."
+      content="I build business software that connects modern web applications with enterprise systems — from interfaces and APIs to integrations and deployment."
     />
     <meta property="og:image" content="https://www.tilakjoshi.com.np/assets/images/img22.png" />
     <meta property="og:url" content="https://www.tilakjoshi.com.np" />
@@ -38,7 +38,7 @@
       rel="stylesheet"
     />
 
-    <!-- Icons -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -47,13 +47,29 @@
 
     <link rel="stylesheet" href="assets/style.css" />
 
+    <!-- Theme boot: apply saved/system theme before first paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.setAttribute("data-theme", saved);
+          } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {
+          /* localStorage unavailable — keep dark default */
+        }
+      })();
+    </script>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Tilak Joshi",
         "url": "https://www.tilakjoshi.com.np",
-        "email": "mailto:t.joshi.dev@gmail.com",
+        "email": "mailto:me@tilakjoshi.com.np",
         "telephone": "+9779863172583",
         "sameAs": [
           "https://www.linkedin.com/in/tilakjoshii",
@@ -61,7 +77,7 @@
           "https://www.facebook.com/tilakjoshii",
           "https://t.me/tilakjoshi"
         ],
-        "jobTitle": "Full-Stack Engineer & SAP B1 Specialist",
+        "jobTitle": "Full-Stack Engineer",
         "worksFor": {
           "@type": "Organization",
           "name": "Bizhub Consulting Service"
@@ -81,581 +97,717 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- ===================== HEADER ===================== -->
     <header class="header" id="header">
-      <a href="#home" class="logo mono">
-        <span class="logo-prompt">~/</span>tilak_joshi<span class="accent">_</span>
-      </a>
-
-      <nav class="navbar" id="navbar" aria-label="Primary">
-        <a href="#home" class="active"><span class="mono nav-num">00.</span> Home</a>
-        <a href="#about"><span class="mono nav-num">01.</span> About</a>
-        <a href="#experience"><span class="mono nav-num">02.</span> Experience</a>
-        <a href="#skills"><span class="mono nav-num">03.</span> Skills</a>
-        <a href="#projects"><span class="mono nav-num">04.</span> Projects</a>
-        <a href="#contact"><span class="mono nav-num">05.</span> Contact</a>
-      </nav>
-
-      <a class="btn btn-primary btn-header" href="assets/tilak_resume_netern.pdf" download>
-        <i class="fa-solid fa-file-arrow-down"></i> Resume
-      </a>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </header>
-
-    <main>
-      <!-- ===================== HERO ===================== -->
-      <section class="hero" id="home">
-        <canvas id="heroCanvas" aria-hidden="true"></canvas>
-        <div class="hero-inner">
-          <div class="hero-left">
-            <div class="avatar-wrap reveal">
-              <img src="assets/images/my_images/profile1.jpg" alt="Tilak Joshi" />
-              <span class="status-dot" title="Available for work"></span>
-            </div>
-
-            <p class="mono intro reveal">Hi, my name is</p>
-            <h1 class="name reveal">Tilak Joshi.</h1>
-            <h2 class="role reveal">
-              <span class="role-prefix mono">&gt;</span>
-              <span id="typed"></span><span class="cursor">_</span>
-            </h2>
-
-            <p class="bio reveal">
-              Full-Stack Engineer &amp; SAP B1 Specialist. I design and ship enterprise ERP
-              add-ons, scalable web applications and CI/CD automation — from SAP Business One
-              back-ends to modern React front-ends.
-            </p>
-
-            <div class="hero-actions reveal">
-              <a href="#projects" class="btn btn-primary">View Projects</a>
-              <a href="#contact" class="btn btn-ghost">Contact Me</a>
-            </div>
-
-            <div class="socials reveal">
-              <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/tilakjoshii" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="https://t.me/tilakjoshi" target="_blank" rel="noopener" aria-label="Telegram">
-                <i class="fa-brands fa-telegram"></i>
-              </a>
-              <a href="mailto:t.joshi.dev@gmail.com" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="hero-right reveal">
-            <div class="terminal" aria-hidden="true">
-              <div class="terminal-head">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
-                <span class="terminal-title mono">tilak@engineer: ~</span>
-              </div>
-              <div class="terminal-body mono">
-                <p><span class="t-prompt">$</span> whoami</p>
-                <p class="t-out">Tilak Joshi — Full-Stack Engineer</p>
-                <p><span class="t-prompt">$</span> cat stack.json</p>
-                <p class="t-out">
-                  { "erp": "SAP B1 · DI API · HANA",<br />
-                  &nbsp;&nbsp;"web": "MERN · .NET · TypeScript",<br />
-                  &nbsp;&nbsp;"devops": "Docker · Jenkins · CI/CD" }
-                </p>
-                <p><span class="t-prompt">$</span> git status</p>
-                <p class="t-out">
-                  On branch <span class="t-green">main</span> — clean tree, always shipping
-                </p>
-                <p class="t-out">10+ SAP add-ons deployed to production.</p>
-                <p><span class="t-prompt">$</span> <span class="cursor-blink">▊</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a href="#about" class="scroll-hint" aria-label="Scroll down">
-          <i class="fa-solid fa-chevron-down"></i>
+      <div class="container header-inner">
+        <a href="#home" class="logo mono">
+          <span class="logo-prompt">~/</span>tilak_joshi
         </a>
-      </section>
 
-      <!-- ===================== TECH MARQUEE ===================== -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track mono">
-          <span>SAP B1</span><i>·</i>
-          <span>DI API</span><i>·</i>
-          <span>React</span><i>·</i>
-          <span>Node.js</span><i>·</i>
-          <span>TypeScript</span><i>·</i>
-          <span>.NET</span><i>·</i>
-          <span>C#</span><i>·</i>
-          <span>MongoDB</span><i>·</i>
-          <span>SQL Server</span><i>·</i>
-          <span>Docker</span><i>·</i>
-          <span>Jenkins</span><i>·</i>
-          <span>GitHub Actions</span><i>·</i>
-          <span>Crystal Reports</span><i>·</i>
-          <span>Linux</span><i>·</i>
-          <span>SAP B1</span><i>·</i>
-          <span>DI API</span><i>·</i>
-          <span>React</span><i>·</i>
-          <span>Node.js</span><i>·</i>
-          <span>TypeScript</span><i>·</i>
-          <span>.NET</span><i>·</i>
-          <span>C#</span><i>·</i>
-          <span>MongoDB</span><i>·</i>
-          <span>SQL Server</span><i>·</i>
-          <span>Docker</span><i>·</i>
-          <span>Jenkins</span><i>·</i>
-          <span>GitHub Actions</span><i>·</i>
-          <span>Crystal Reports</span><i>·</i>
-          <span>Linux</span><i>·</i>
+        <!-- No-JS friendly menu: a hidden checkbox + visible label toggle the nav via CSS -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="menu-btn" id="menuBtn" aria-controls="navbar" aria-expanded="false">
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="sr-only">Toggle navigation menu</span>
+        </label>
+
+        <nav class="navbar" id="navbar" aria-label="Primary">
+          <a href="#home" class="active"><span class="nav-num mono">00</span>Home</a>
+          <a href="#portflio"><span class="nav-num mono">01</span>Work</a>
+          <a href="#about_me"><span class="nav-num mono">02</span>About</a>
+          <a href="#skills"><span class="nav-num mono">03</span>Skills</a>
+          <a href="#services"><span class="nav-num mono">04</span>Experience</a>
+          <a href="#contact"><span class="nav-num mono">05</span>Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to light theme">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <a class="btn btn-primary btn-sm btn-resume" href="assets/tilak_resume_netern.pdf" download>
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Resume
+          </a>
         </div>
       </div>
+    </header>
 
-      <!-- ===================== ABOUT ===================== -->
-      <section class="section" id="about">
-        <h2 class="section-title reveal"><span class="mono accent">01.</span> About Me</h2>
-        <div class="about-grid">
-          <div class="about-photo reveal">
-            <div class="photo-frame">
-              <img src="assets/images/my_images/profile3.jpg" alt="Tilak Joshi portrait" />
+    <main id="main">
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" id="home" aria-labelledby="hero-name">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1 class="hero-name" id="hero-name">Tilak Joshi</h1>
+            <p class="hero-headline">
+              Full-Stack Engineer building <span class="accent">SaaS</span> and business integrations.
+            </p>
+            <p class="hero-focus mono">SAP Business One · Web Applications · API Integrations · DevOps</p>
+            <p class="hero-intro">
+              I build business software that connects modern web applications with enterprise
+              systems&mdash;from intuitive interfaces and backend APIs to integrations and deployment.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#portflio" class="btn btn-primary">View Selected Work</a>
+              <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+              <a href="assets/tilak_resume_netern.pdf" class="btn btn-ghost" download>
+                <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+              </a>
+            </div>
+
+            <div class="hero-socials" aria-label="Social links">
+              <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/tilakjoshii" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:me@tilakjoshi.com.np" aria-label="Send email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="about-content reveal">
-            <h3 class="about-heading">
-              Full-Stack Engineer with <span class="accent">SAP superpowers</span>.
-            </h3>
-            <p>
-              I'm a software engineer who lives at the intersection of enterprise ERP and modern
-              web. I've shipped <strong>10+ SAP Business One add-ons</strong> covering Production,
-              Dispatch, Inventory and Quality Control — and I pair that with the MERN stack and
-              .NET to build fast, reliable full-stack products.
-            </p>
-            <p>
-              Right now I work as a <strong>Senior MERN Stack Developer at Bizhub Consulting
-              Service</strong>, where I lead a small team, integrate payment &amp; tax systems
-              (Connect IPS, IRD CBMS) into SAP B1, and automate CI/CD pipelines.
-            </p>
 
-            <ul class="about-list">
-              <li><i class="fa-solid fa-cube"></i> SAP B1 Add-ons, DI API &amp; Crystal Reports</li>
-              <li><i class="fa-solid fa-layer-group"></i> MERN, .NET, TypeScript &amp; C#</li>
-              <li><i class="fa-solid fa-code-branch"></i> Docker, Jenkins &amp; GitHub Actions</li>
-              <li><i class="fa-solid fa-people-group"></i> Agile teamwork, mentoring &amp; delivery</li>
-            </ul>
-
-            <div class="stats">
-              <div class="stat">
-                <span class="stat-value mono" data-count="3" data-suffix="+">0</span>
-                <span class="stat-label">Years Experience</span>
-              </div>
-              <div class="stat">
-                <span class="stat-value mono" data-count="10" data-suffix="+">0</span>
-                <span class="stat-label">SAP B1 Add-ons</span>
-              </div>
-              <div class="stat">
-                <span class="stat-value mono" data-count="25" data-suffix="+">0</span>
-                <span class="stat-label">Projects Delivered</span>
-              </div>
-              <div class="stat">
-                <span class="stat-value mono" data-count="100" data-suffix="%">0</span>
-                <span class="stat-label">Client Satisfaction</span>
-              </div>
+          <div class="hero-media">
+            <div class="portrait-frame">
+              <img
+                src="assets/images/optimized/profile1.jpg"
+                alt="Portrait of Tilak Joshi"
+                width="960"
+                height="1160"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="portrait-caption">
+              <span class="caption-label mono">Currently</span>
+              <span class="caption-text">Senior MERN Stack Developer, Bizhub Consulting Service</span>
+              <span class="caption-meta mono">SAP B1 · SaaS · Integrations · DevOps</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===================== EXPERIENCE ===================== -->
-      <section class="section section-alt" id="experience">
-        <h2 class="section-title reveal"><span class="mono accent">02.</span> Experience</h2>
+      <!-- ===================== SELECTED WORK ===================== -->
+      <section class="section" id="portflio" aria-labelledby="work-title">
+        <div class="container">
+          <h2 class="section-title" id="work-title">
+            <span class="section-index mono">01</span>Selected Work
+          </h2>
+          <p class="section-lede">
+            Business applications, integrations and platforms I work on today.
+          </p>
 
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-marker"></div>
-            <div class="timeline-card">
-              <div class="timeline-top">
-                <h3>Senior MERN Stack Developer</h3>
-                <span class="badge mono">Dec 2023 — Present</span>
-              </div>
-              <p class="company">
-                <i class="fa-solid fa-building"></i> Bizhub Consulting Service · Lalitpur, Nepal
+          <!-- Featured project -->
+          <article class="project-featured reveal">
+            <div class="featured-media">
+              <img
+                src="assets/images/optimized/tinybee1.jpg"
+                alt="Screenshot of the TinyBee1 business platform"
+                width="1280"
+                height="721"
+                loading="lazy"
+              />
+            </div>
+            <div class="featured-body">
+              <p class="featured-tag mono">Featured project</p>
+              <h3 class="featured-title">TinyBee1</h3>
+              <p class="featured-sub">SAP Business One connected business platform</p>
+              <p class="featured-desc">
+                A business platform connected to SAP Business One, supporting multiple departments
+                with role-based access and real-time synchronization with third-party systems.
               </p>
-              <ul class="timeline-list">
-                <li>Developed <strong>10+ SAP B1 ERP add-ons</strong> (Production, Dispatch, Inventory, QC) improving process efficiency by 40%.</li>
-                <li>Integrated <strong>Connect IPS payments</strong> into SAP B1 with token-based auth — 500+ automated transactions monthly.</li>
-                <li>Delivered 7+ full-stack modules in 2-week Agile sprints with a <strong>95% on-time delivery</strong> rate.</li>
-                <li>Designed an SMS alert system sending <strong>1000+ transactional notifications</strong> per month.</li>
-                <li>Led a team of 3 developers, improving velocity by 30% and refactoring legacy modules for 25% faster response.</li>
+              <ul class="project-tech" aria-label="Technologies">
+                <li class="chip">SAP B1</li>
+                <li class="chip">.NET</li>
+                <li class="chip">SQL Server</li>
               </ul>
             </div>
+          </article>
+
+          <!-- Current work -->
+          <div class="work-grid">
+            <article class="project-card reveal">
+              <div class="project-cover cover-text cover-slate" aria-hidden="true">
+                <span class="cover-monogram mono">DL</span>
+                <span class="cover-name">DynoLocker</span>
+                <span class="cover-type mono">Project</span>
+              </div>
+              <div class="project-body">
+                <h3>DynoLocker</h3>
+                <p class="project-sub">Product website</p>
+                <p class="project-desc">
+                  A verified description and live link will be added once the product details and
+                  domain are confirmed.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover cover-text cover-cyan" aria-hidden="true">
+                <span class="cover-monogram mono">CP</span>
+                <span class="cover-name">ChatPilot</span>
+                <span class="cover-type mono">Product</span>
+              </div>
+              <div class="project-body">
+                <h3>ChatPilot</h3>
+                <p class="project-sub">WhatsApp Business messaging and integrations</p>
+                <p class="project-desc">
+                  Worked on embedded signup, OAuth, webhooks, template messaging and background
+                  processing for a WhatsApp Business messaging product.
+                </p>
+                <p class="project-status mono">AI features &amp; additional channels — ongoing</p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">WhatsApp Cloud API</li>
+                  <li class="chip">OAuth 2.0</li>
+                  <li class="chip">Webhooks</li>
+                  <li class="chip">Background Jobs</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover cover-text cover-slate" aria-hidden="true">
+                <span class="cover-monogram mono">BF</span>
+                <span class="cover-name">BizForce360</span>
+                <span class="cover-type mono">Product</span>
+              </div>
+              <div class="project-body">
+                <h3>BizForce / BizForce360</h3>
+                <p class="project-sub">Business applications and integrations</p>
+                <p class="project-desc">
+                  A suite of business applications and integrations. I build application features
+                  and the integrations that connect them to other systems.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">Business Applications</li>
+                  <li class="chip">Integrations</li>
+                </ul>
+              </div>
+            </article>
           </div>
 
-          <div class="timeline-item reveal">
-            <div class="timeline-marker"></div>
-            <div class="timeline-card">
-              <div class="timeline-top">
-                <h3>Web Developer</h3>
-                <span class="badge mono">Apr 2022 — Oct 2023</span>
+          <!-- Additional work -->
+          <h3 class="work-subhead">Additional Work</h3>
+          <div class="work-grid">
+            <article class="project-card reveal">
+              <div class="project-cover">
+                <img
+                  src="assets/images/optimized/griha1.jpg"
+                  alt="Screenshot of the Griha room finder application"
+                  width="800"
+                  height="451"
+                  loading="lazy"
+                />
               </div>
-              <p class="company">
-                <i class="fa-solid fa-building"></i> Neem Infosys · Mahendranagar, Nepal
-              </p>
-              <ul class="timeline-list">
-                <li>Built and maintained <strong>15+ WordPress websites</strong> for SMEs and NGOs, boosting client traffic by 20%.</li>
-                <li>Improved SEO to land <strong>top-3 Google rankings</strong> for 5+ client websites within 3 months.</li>
-                <li>Cut average bounce rate from 60% to 35% through UI/UX improvements.</li>
-                <li>Created 10+ custom plugins and automated workflows, reducing manual content updates by 40%.</li>
-                <li>Mentored 3 junior developers and maintained a 100% client satisfaction rate.</li>
-              </ul>
-            </div>
+              <div class="project-body">
+                <h3>Griha — Room Finder</h3>
+                <p class="project-desc">
+                  A MERN stack room-booking app with real-time availability and tracking.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">React</li>
+                  <li class="chip">Node.js</li>
+                  <li class="chip">MongoDB</li>
+                </ul>
+                <p class="project-links">
+                  <a class="link-arrow" href="https://griha.onrender.com/" target="_blank" rel="noopener">
+                    Live site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover">
+                <img
+                  src="assets/images/optimized/green_peace1.jpg"
+                  alt="Screenshot of the Green Peace WordPress website"
+                  width="800"
+                  height="451"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <h3>Green Peace</h3>
+                <p class="project-desc">
+                  A responsive, dynamic WordPress theme built for a non-profit organization.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">WordPress</li>
+                  <li class="chip">PHP</li>
+                </ul>
+                <p class="project-links">
+                  <a class="link-arrow" href="https://greenpeaceletang.com/" target="_blank" rel="noopener">
+                    Live site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover">
+                <img
+                  src="assets/images/optimized/digital-services.jpg"
+                  alt="Screenshot of the Neem Digital Services website"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <h3>Neem Digital Services</h3>
+                <p class="project-desc">
+                  An agency website with a clean, responsive, performance-first build.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                  <li class="chip">JavaScript</li>
+                </ul>
+                <p class="project-links">
+                  <a class="link-arrow" href="https://tilakjoshii.github.io/neem-digital-services/" target="_blank" rel="noopener">
+                    Live site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover cover-text cover-cyan" aria-hidden="true">
+                <span class="cover-monogram mono">CI</span>
+                <span class="cover-name">Connect IPS Integration</span>
+                <span class="cover-type mono">SAP B1 Integration</span>
+              </div>
+              <div class="project-body">
+                <h3>Connect IPS Integration</h3>
+                <p class="project-desc">
+                  Payment gateway integration for SAP Business One using secure token-based
+                  authentication and automated reconciliation.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">SAP B1</li>
+                  <li class="chip">REST API</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover cover-text cover-emerald" aria-hidden="true">
+                <span class="cover-monogram mono">CB</span>
+                <span class="cover-name">IRD CBMS Integration</span>
+                <span class="cover-type mono">SAP B1 Integration</span>
+              </div>
+              <div class="project-body">
+                <h3>IRD CBMS Integration</h3>
+                <p class="project-desc">
+                  Automated invoice submission to Nepal's Inland Revenue Department from SAP
+                  Business One, removing manual data entry from the compliance workflow.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">SAP B1</li>
+                  <li class="chip">API</li>
+                  <li class="chip">Crystal Reports</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-cover cover-text cover-slate" aria-hidden="true">
+                <span class="cover-monogram mono">SN</span>
+                <span class="cover-name">College Web Clone</span>
+                <span class="cover-type mono">Web Design</span>
+              </div>
+              <div class="project-body">
+                <h3>College Web Clone</h3>
+                <p class="project-desc">
+                  A sample college website design used to explore layout, responsiveness and
+                  component reuse.
+                </p>
+                <ul class="project-tech" aria-label="Technologies">
+                  <li class="chip">HTML</li>
+                  <li class="chip">CSS</li>
+                  <li class="chip">JavaScript</li>
+                </ul>
+                <p class="project-links">
+                  <a class="link-arrow" href="https://tilakjoshii.github.io/SNSC_Web_Clone_Site/" target="_blank" rel="noopener">
+                    Live site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
 
-        <!-- Education -->
-        <div class="education">
-          <div class="edu-card reveal">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <div>
-              <h3>BSc. Computer Science &amp; Information Technology</h3>
-              <p>Siddhanath Science Campus, Tribhuvan University · 2019 — 2023</p>
-              <span class="badge mono">Top 5% of batch</span>
+      <!-- ===================== ABOUT ===================== -->
+      <section class="section section-alt" id="about_me" aria-labelledby="about-title">
+        <div class="container">
+          <h2 class="section-title" id="about-title">
+            <span class="section-index mono">02</span>About Me
+          </h2>
+
+          <div class="about-grid">
+            <div class="about-media">
+              <img
+                src="assets/images/optimized/profile3.jpg"
+                alt="Tilak Joshi working portrait"
+                width="960"
+                height="1280"
+                loading="lazy"
+              />
             </div>
-          </div>
-          <div class="edu-card reveal">
-            <i class="fa-solid fa-school"></i>
-            <div>
-              <h3>+2 Science (NEB)</h3>
-              <p>Little Buddha Academy, Kanchanpur · 2017 — 2019</p>
+
+            <div class="about-body">
+              <p>
+                I'm a full-stack engineer who builds business software end to end&mdash;from React
+                and Next.js interfaces to Node.js APIs, databases and deployment pipelines. Much of
+                my recent work sits at the boundary between modern web applications and enterprise
+                systems, especially SAP Business One.
+              </p>
+              <p>
+                As a Senior MERN Stack Developer at Bizhub Consulting Service, I build SAP B1
+                add-ons and integrations, SaaS-style products, and messaging workflows that keep
+                business processes connected and automated.
+              </p>
+
+              <ul class="about-focus">
+                <li>
+                  <strong>Full-stack business applications</strong>
+                  <span>Web apps with React and Node.js, from UI to API to database.</span>
+                </li>
+                <li>
+                  <strong>SAP Business One integrations &amp; add-ons</strong>
+                  <span>DI API, add-on development, Crystal Reports, payment and tax integrations.</span>
+                </li>
+                <li>
+                  <strong>SaaS products &amp; messaging integrations</strong>
+                  <span>WhatsApp Cloud API, embedded signup, OAuth, webhooks and template messaging.</span>
+                </li>
+                <li>
+                  <strong>Background processing &amp; deployment workflows</strong>
+                  <span>Queues, scheduled jobs, Docker, CI/CD and day-to-day server operations.</span>
+                </li>
+              </ul>
+
+              <p class="about-meta mono">
+                Based in Bhimdatta, Kanchanpur, Nepal · me@tilakjoshi.com.np
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ===================== SKILLS ===================== -->
-      <section class="section" id="skills">
-        <h2 class="section-title reveal"><span class="mono accent">03.</span> Skills &amp; Stack</h2>
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 class="section-title" id="skills-title">
+            <span class="section-index mono">03</span>Skills &amp; Technologies
+          </h2>
+          <p class="section-lede">
+            The tools and platforms I use to design, build, integrate and ship business software.
+          </p>
 
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <div class="skill-head">
-              <i class="fa-solid fa-code"></i>
-              <h3>Languages &amp; Frameworks</h3>
-            </div>
-            <div class="chips">
-              <span class="chip">JavaScript</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">C#</span>
-              <span class="chip">SQL</span>
-              <span class="chip">HTML</span>
-              <span class="chip">CSS</span>
-              <span class="chip">React</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">Express</span>
-              <span class="chip">.NET</span>
-            </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h3>Frontend</h3>
+              <p>Interfaces that are fast, accessible and responsive.</p>
+              <ul class="chips" aria-label="Frontend skills">
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">React</li>
+                <li class="chip">Next.js</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">Ant Design</li>
+                <li class="chip">Redux</li>
+                <li class="chip">Responsive UI</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>Backend &amp; APIs</h3>
+              <p>Services, authentication, background jobs and real-time communication.</p>
+              <ul class="chips" aria-label="Backend skills">
+                <li class="chip">Node.js</li>
+                <li class="chip">Express</li>
+                <li class="chip">REST APIs</li>
+                <li class="chip">Mongoose</li>
+                <li class="chip">Zod</li>
+                <li class="chip">JWT</li>
+                <li class="chip">OAuth 2.0</li>
+                <li class="chip">Webhooks</li>
+                <li class="chip">Socket.IO</li>
+                <li class="chip">BullMQ</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>Databases &amp; Caching</h3>
+              <p>Relational, document and in-memory data stores.</p>
+              <ul class="chips" aria-label="Database and caching skills">
+                <li class="chip">MongoDB</li>
+                <li class="chip">PostgreSQL</li>
+                <li class="chip">MySQL</li>
+                <li class="chip">SQL Server</li>
+                <li class="chip">SAP HANA</li>
+                <li class="chip">Redis</li>
+                <li class="chip">Prisma</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>SAP &amp; Business Integrations</h3>
+              <p>Enterprise ERP extensions and business system connectors.</p>
+              <ul class="chips" aria-label="SAP and integration skills">
+                <li class="chip chip-key">SAP Business One</li>
+                <li class="chip">DI API</li>
+                <li class="chip">Crystal Reports</li>
+                <li class="chip">Add-on Development</li>
+                <li class="chip">Connect IPS</li>
+                <li class="chip">IRD CBMS</li>
+                <li class="chip">WhatsApp Cloud API</li>
+                <li class="chip">Meta Graph API</li>
+                <li class="chip">Embedded Signup</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>DevOps &amp; Infrastructure</h3>
+              <p>Containerized, automated and reproducible deployments.</p>
+              <ul class="chips" aria-label="DevOps skills">
+                <li class="chip">Docker</li>
+                <li class="chip">Docker Compose</li>
+                <li class="chip">Portainer</li>
+                <li class="chip">Nginx</li>
+                <li class="chip">GitHub Actions</li>
+                <li class="chip">Jenkins</li>
+                <li class="chip">Git</li>
+                <li class="chip">Linux</li>
+                <li class="chip">Windows Server</li>
+                <li class="chip">SSH</li>
+                <li class="chip">Process Management</li>
+                <li class="chip">Backup &amp; Restore</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>AI &amp; Current Learning</h3>
+              <p>Currently learning and exploring — not yet core delivery work.</p>
+              <ul class="chips" aria-label="AI and learning skills">
+                <li class="chip chip-key">Gemini API</li>
+                <li class="chip">Qdrant</li>
+                <li class="chip">Vector Search</li>
+                <li class="chip">RAG</li>
+              </ul>
+            </article>
           </div>
 
-          <div class="skill-card reveal">
-            <div class="skill-head">
-              <i class="fa-solid fa-boxes-stacked"></i>
-              <h3>SAP &amp; Enterprise</h3>
-            </div>
-            <div class="chips">
-              <span class="chip accent-chip">SAP Business One</span>
-              <span class="chip">SAP DI API</span>
-              <span class="chip">SAP HANA</span>
-              <span class="chip">Crystal Reports</span>
-              <span class="chip">Connect IPS</span>
-              <span class="chip">IRD CBMS</span>
-              <span class="chip">Add-on Development</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-head">
-              <i class="fa-solid fa-database"></i>
-              <h3>Databases</h3>
-            </div>
-            <div class="chips">
-              <span class="chip">MongoDB</span>
-              <span class="chip">MS SQL Server</span>
-              <span class="chip">SAP HANA</span>
-              <span class="chip">MySQL</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <div class="skill-head">
-              <i class="fa-solid fa-code-branch"></i>
-              <h3>DevOps &amp; Tools</h3>
-            </div>
-            <div class="chips">
-              <span class="chip">Docker</span>
-              <span class="chip">Jenkins</span>
-              <span class="chip">GitHub Actions</span>
-              <span class="chip">Git / GitHub</span>
-              <span class="chip">Linux (SUSE)</span>
-              <span class="chip">Agile / Scrum</span>
-            </div>
-          </div>
+          <p class="skills-note mono">
+            <span class="skills-note-label">Additional experience:</span> C#, .NET, PHP, WordPress
+          </p>
         </div>
       </section>
 
-      <!-- ===================== PROJECTS ===================== -->
-      <section class="section section-alt" id="projects">
-        <h2 class="section-title reveal"><span class="mono accent">04.</span> Projects</h2>
+      <!-- ===================== EXPERIENCE & EDUCATION ===================== -->
+      <section class="section section-alt" id="services" aria-labelledby="experience-title">
+        <div class="container">
+          <h2 class="section-title" id="experience-title">
+            <span class="section-index mono">04</span>Experience &amp; Education
+          </h2>
 
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img src="assets/images/images_portflio/tinybee1/tinybee1.png" alt="TinyBee1 SAP B1 platform" loading="lazy" />
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="TinyBee1 source">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <h3>TinyBee1 — SAP B1 Business Platform</h3>
-              <p>
-                SAP Business One-powered platform supporting 5+ departments with role-based
-                access and real-time third-party system synchronization.
-              </p>
-              <div class="chips">
-                <span class="chip">SAP B1</span>
-                <span class="chip">.NET</span>
-                <span class="chip">SQL Server</span>
-              </div>
-            </div>
-          </article>
+          <div class="exp-grid">
+            <div class="exp-timeline">
+              <article class="exp-card reveal">
+                <header class="exp-head">
+                  <h3>Senior MERN Stack Developer</h3>
+                  <span class="badge mono">Dec 2023 — Present</span>
+                </header>
+                <p class="exp-company">
+                  <i class="fa-solid fa-building" aria-hidden="true"></i>
+                  Bizhub Consulting Service · Lalitpur, Nepal
+                </p>
+                <ul class="exp-list">
+                  <li>Develop SAP Business One add-ons across Production, Dispatch, Inventory and Quality Control modules.</li>
+                  <li>Integrate payment and tax systems with SAP B1, including Connect IPS payments and IRD CBMS invoice submission.</li>
+                  <li>Build full-stack modules in short Agile sprints, with a focus on on-time delivery and code quality.</li>
+                  <li>Design and maintain background services such as SMS notifications and freight and budget tracking.</li>
+                  <li>Lead a small team of developers — running requirement sessions, reviewing code and coordinating delivery.</li>
+                </ul>
+              </article>
 
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img src="assets/images/images_portflio/griha/griha1.png" alt="Griha room finder" loading="lazy" />
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://griha.onrender.com/" target="_blank" rel="noopener" aria-label="Griha live site">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                  <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="Griha source">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <h3>Griha — Smart Room Finder</h3>
-              <p>
-                MERN stack room-booking app with real-time availability, tracking and logging —
-                used by 20+ employees.
-              </p>
-              <div class="chips">
-                <span class="chip">React</span>
-                <span class="chip">Node.js</span>
-                <span class="chip">MongoDB</span>
-              </div>
-            </div>
-          </article>
+              <article class="exp-card exp-card--part-time reveal">
+                <header class="exp-head">
+                  <h3>Full Stack Developer</h3>
+                  <div class="exp-badges">
+                    <span class="badge mono">Aug 2025 — Present</span>
+                    <span class="badge badge-soft mono">Part-time</span>
+                    <span class="badge badge-soft mono">Hybrid</span>
+                  </div>
+                </header>
+                <p class="exp-company">
+                  <i class="fa-solid fa-building" aria-hidden="true"></i>
+                  Global Dairy · Kathmandu, Nepal
+                </p>
+                <ul class="exp-list">
+                  <li>Handle end-to-end development, from frontend interfaces to backend APIs and database integration.</li>
+                  <li>Build and maintain application features across the full stack.</li>
+                  <li>Work on caching and deployment as part of application delivery.</li>
+                </ul>
+              </article>
 
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img src="assets/images/bg44.png" alt="Connect IPS SAP B1 integration" loading="lazy" />
+              <article class="exp-card reveal">
+                <header class="exp-head">
+                  <h3>Web Developer</h3>
+                  <span class="badge mono">Apr 2022 — Oct 2023</span>
+                </header>
+                <p class="exp-company">
+                  <i class="fa-solid fa-building" aria-hidden="true"></i>
+                  Neem Infosys · Mahendranagar, Nepal
+                </p>
+                <ul class="exp-list">
+                  <li>Built and maintained WordPress websites for SMEs and NGOs.</li>
+                  <li>Improved site SEO, UI/UX and content workflows across client projects.</li>
+                  <li>Created custom plugins and automated recurring content updates.</li>
+                  <li>Mentored junior developers and standardized onboarding documentation.</li>
+                  <li>Managed client relationships and gathered requirements across multiple projects.</li>
+                </ul>
+              </article>
             </div>
-            <div class="project-body">
-              <div class="project-top">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="Connect IPS integration source">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <h3>Connect IPS — SAP B1 Payment Gateway</h3>
-              <p>
-                Secure token-based payment integration enabling 500+ direct banking transactions
-                monthly with automated reconciliation.
-              </p>
-              <div class="chips">
-                <span class="chip">SAP B1</span>
-                <span class="chip">REST API</span>
-                <span class="chip">.NET</span>
-              </div>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img src="assets/images/bg55.png" alt="IRD CBMS tax integration" loading="lazy" />
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="IRD CBMS integration source">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
+            <aside class="exp-edu" aria-label="Education">
+              <article class="edu-card reveal">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <div>
+                  <h3>BSc. Computer Science &amp; IT</h3>
+                  <p>Siddhanath Science Campus, Tribhuvan University</p>
+                  <span class="badge mono">2019 — 2023</span>
                 </div>
-              </div>
-              <h3>IRD CBMS — Tax Compliance Automation</h3>
-              <p>
-                Automated invoice submission to Nepal's Inland Revenue Department with 100%
-                regulatory compliance and zero manual intervention.
-              </p>
-              <div class="chips">
-                <span class="chip">SAP B1</span>
-                <span class="chip">API</span>
-                <span class="chip">Crystal Reports</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img src="assets/images/images_portflio/green_peace/green_peace1.png" alt="Green Peace WordPress theme" loading="lazy" />
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://greenpeaceletang.com/" target="_blank" rel="noopener" aria-label="Green Peace live site">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
+              </article>
+              <article class="edu-card reveal">
+                <i class="fa-solid fa-school" aria-hidden="true"></i>
+                <div>
+                  <h3>+2 Science (NEB)</h3>
+                  <p>Little Buddha Academy, Kanchanpur</p>
+                  <span class="badge mono">2017 — 2019</span>
                 </div>
-              </div>
-              <h3>Green Peace — WordPress Theme</h3>
-              <p>Fully responsive, dynamic WordPress theme built for a non-profit organization.</p>
-              <div class="chips">
-                <span class="chip">WordPress</span>
-                <span class="chip">PHP</span>
-                <span class="chip">jQuery</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img src="assets/images/digital-services.png" alt="Neem Digital Services website" loading="lazy" />
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <i class="fa-solid fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://tilakjoshii.github.io/neem-digital-services/" target="_blank" rel="noopener" aria-label="Neem Digital Services live site">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
-              </div>
-              <h3>Neem Digital Services</h3>
-              <p>Modern agency website with clean UI, responsive layout and performance-first build.</p>
-              <div class="chips">
-                <span class="chip">HTML</span>
-                <span class="chip">CSS</span>
-                <span class="chip">JavaScript</span>
-              </div>
-            </div>
-          </article>
+              </article>
+            </aside>
+          </div>
         </div>
       </section>
 
       <!-- ===================== CONTACT ===================== -->
-      <section class="section" id="contact">
-        <h2 class="section-title reveal"><span class="mono accent">05.</span> Contact</h2>
-        <p class="contact-sub reveal">
-          Have a project, an SAP integration, or an opportunity? My inbox is always open.
-        </p>
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 class="section-title" id="contact-title">
+            <span class="section-index mono">05</span>Contact
+          </h2>
+          <p class="section-lede">
+            Have a project, an SAP integration, or an opportunity? My inbox is always open.
+          </p>
 
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <a class="info-card" href="tel:+9779863172583">
-              <i class="fa-solid fa-phone"></i>
-              <div>
-                <span class="info-label mono">Phone</span>
-                <span class="info-value">+977 9863172583</span>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <a class="info-card" href="tel:+9779863172583">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>
+                  <span class="info-label mono">Phone</span>
+                  <span class="info-value">+977 9863172583</span>
+                </span>
+              </a>
+              <a class="info-card" href="mailto:me@tilakjoshi.com.np">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>
+                  <span class="info-label mono">Email</span>
+                  <span class="info-value">me@tilakjoshi.com.np</span>
+                </span>
+              </a>
+              <div class="info-card">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>
+                  <span class="info-label mono">Location</span>
+                  <span class="info-value">Bhimdatta-18, Kanchanpur, Nepal</span>
+                </span>
               </div>
-            </a>
-            <a class="info-card" href="mailto:t.joshi.dev@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
-              <div>
-                <span class="info-label mono">Email</span>
-                <span class="info-value">t.joshi.dev@gmail.com</span>
-              </div>
-            </a>
-            <div class="info-card">
-              <i class="fa-solid fa-location-dot"></i>
-              <div>
-                <span class="info-label mono">Location</span>
-                <span class="info-value">Bhimdatta-18, Kanchanpur, Nepal</span>
+
+              <div class="contact-socials" aria-label="Social links">
+                <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="GitHub profile">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tilakjoshii" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://t.me/tilakjoshi" target="_blank" rel="noopener" aria-label="Telegram">
+                  <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/tilakjoshii" target="_blank" rel="noopener" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
 
-            <div class="contact-socials">
-              <a href="https://github.com/tilakjoshii" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/tilakjoshii" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="https://t.me/tilakjoshi" target="_blank" rel="noopener" aria-label="Telegram">
-                <i class="fa-brands fa-telegram"></i>
-              </a>
-              <a href="https://www.facebook.com/tilakjoshii" target="_blank" rel="noopener" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-            </div>
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="mailto:me@tilakjoshi.com.np"
+              method="post"
+              enctype="text/plain"
+              novalidate
+            >
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name" class="mono">Name <span aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="err-name" />
+                  <p class="field-error mono" id="err-name"></p>
+                </div>
+                <div class="form-field">
+                  <label for="email" class="mono">Email <span aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="err-email" />
+                  <p class="field-error mono" id="err-email"></p>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="subject" class="mono">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Project / SAP integration / Opportunity" />
+              </div>
+
+              <div class="form-field">
+                <label for="message" class="mono">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="6" required aria-describedby="err-message" placeholder="Tell me about your project..."></textarea>
+                <p class="field-error mono" id="err-message"></p>
+              </div>
+
+              <p class="form-hint">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                This opens your email app. Your message is sent from your own email account to
+                <strong>me@tilakjoshi.com.np</strong> — please press send there.
+              </p>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                Open Email App <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </button>
+              <p class="form-status mono" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
           </div>
-
-          <form class="contact-form reveal" id="contactForm" novalidate>
-            <div class="form-row">
-              <div class="form-field">
-                <label class="mono" for="name">Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required />
-                <span class="field-error mono" id="err-name"></span>
-              </div>
-              <div class="form-field">
-                <label class="mono" for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
-                <span class="field-error mono" id="err-email"></span>
-              </div>
-            </div>
-            <div class="form-field">
-              <label class="mono" for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Project / SAP integration / Opportunity" />
-            </div>
-            <div class="form-field">
-              <label class="mono" for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-              <span class="field-error mono" id="err-message"></span>
-            </div>
-            <button type="submit" class="btn btn-primary btn-submit">
-              <span class="btn-text">Send Message</span>
-              <span class="btn-loader mono" hidden>sending...</span>
-            </button>
-            <p class="form-status mono" id="formStatus" role="status"></p>
-          </form>
         </div>
       </section>
     </main>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
-      <p class="mono">© <span id="currentYear"></span> Tilak Joshi — Designed &amp; built with <i class="fa-solid fa-heart"></i> and too much coffee.</p>
-      <a href="#home" class="to-top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
+      <div class="container footer-inner">
+        <p>
+          © <span id="currentYear">2026</span> Tilak Joshi — built with HTML, CSS and vanilla JavaScript.
+        </p>
+        <a class="to-top" href="#home" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
     </footer>
 
-    <!-- SMTP.js for the contact form -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="assets/javasc.js"></script>
   </body>
 </html>
