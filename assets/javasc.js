@@ -127,10 +127,19 @@
     });
   };
 
-  window.addEventListener("scroll", function () {
-    onScrollHeader();
-    spy();
-  });
+  // rAF-throttled, passive scroll handler — keeps scroll work off the main thread
+  var scrollTicking = false;
+  var onScroll = function () {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(function () {
+      onScrollHeader();
+      spy();
+      scrollTicking = false;
+    });
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
   spy();
 
   /* ---------- Scroll reveal ---------- */

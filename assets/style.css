@@ -1,7 +1,7 @@
 /* ==========================================================================
    Tilak Joshi — Portfolio
    Stack: plain HTML5 + CSS + vanilla JavaScript
-   Themes: dark (default) and light, via [data-theme]
+   Mobile-first responsive CSS · Themes: dark (default) + light via [data-theme]
    ========================================================================== */
 
 :root {
@@ -96,6 +96,11 @@ html {
   scroll-padding-top: calc(var(--header-h) + 20px);
 }
 
+/* Keep sticky header clear of anchor targets and focused elements */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--text);
@@ -118,6 +123,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  overflow-wrap: break-word; /* long URLs/emails wrap safely */
 }
 
 ul {
@@ -187,7 +193,7 @@ button {
   top: 1rem;
 }
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons (≥44px touch targets) ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -229,10 +235,10 @@ button {
 .btn-sm {
   padding: 0.55rem 1rem;
   font-size: 0.82rem;
-  min-height: 38px;
+  min-height: 40px;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header (mobile first) ---------- */
 .header {
   position: fixed;
   top: 0;
@@ -254,12 +260,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 0.75rem;
   height: var(--header-h);
 }
 
 .logo {
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -267,46 +273,17 @@ button {
   color: var(--accent);
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.navbar a {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--muted);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
-}
-
-.navbar a .nav-num {
-  color: var(--accent);
-  font-size: 0.74rem;
-  margin-right: 0.15rem;
-}
-
-.navbar a:hover {
-  color: var(--text);
-}
-
-.navbar a.active {
-  color: var(--text);
-  background: var(--accent-soft);
-}
-
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
+  margin-left: auto;
 }
 
 .theme-toggle {
   display: none; /* shown only when JS is available */
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-strong);
@@ -323,6 +300,10 @@ button {
   border-color: var(--accent);
 }
 
+.btn-resume {
+  display: none; /* mobile: resume stays available in the hero */
+}
+
 /* Checkbox-driven mobile menu (works without JS) */
 .nav-toggle {
   position: absolute;
@@ -333,7 +314,7 @@ button {
 }
 
 .menu-btn {
-  display: none;
+  display: inline-flex;
   width: 46px;
   height: 46px;
   align-items: center;
@@ -375,14 +356,61 @@ button {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---------- Hero ---------- */
+.navbar {
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.2rem;
+  background: var(--header-bg);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem clamp(1.25rem, 4vw, 2.5rem) 1.4rem;
+}
+
+#nav-toggle:checked ~ .navbar {
+  display: flex;
+}
+
+.navbar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px; /* comfortable touch target */
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+
+.navbar a .nav-num {
+  color: var(--accent);
+  font-size: 0.76rem;
+  margin-right: 0.35rem;
+}
+
+.navbar a:hover {
+  color: var(--text);
+}
+
+.navbar a.active {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+
+/* ---------- Hero (mobile first) ---------- */
 .hero {
   position: relative;
   display: flex;
   align-items: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: calc(var(--header-h) + 3rem) 0 4.5rem;
+  padding: calc(var(--header-h) + 2rem) 0 3.5rem;
 }
 
 .hero::before {
@@ -398,14 +426,14 @@ button {
 .hero-inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  gap: clamp(2.5rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
   align-items: center;
 }
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.25rem, 9vw, 4rem);
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -414,7 +442,7 @@ button {
 
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 1.85rem);
+  font-size: clamp(1.25rem, 5vw, 1.85rem);
   line-height: 1.3;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -423,31 +451,36 @@ button {
 
 .hero-focus {
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: clamp(0.8rem, 3vw, 0.86rem);
   margin-bottom: 1.3rem;
 }
 
 .hero-intro {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 1rem;
   max-width: 56ch;
   margin-bottom: 2rem;
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.8rem;
   margin-bottom: 1.8rem;
+}
+.hero-actions .btn {
+  width: 100%;
 }
 
 .hero-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
 }
 .hero-socials a {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -506,10 +539,10 @@ button {
   font-size: 0.8rem;
 }
 
-/* ---------- Sections ---------- */
+/* ---------- Sections (mobile first) ---------- */
 .section {
   width: 100%;
-  padding-block: clamp(4.5rem, 8vw, 7rem);
+  padding-block: clamp(3.5rem, 9vw, 7rem);
 }
 
 .section-alt {
@@ -520,7 +553,7 @@ button {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+  font-size: clamp(1.6rem, 6.5vw, 2.35rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -537,24 +570,24 @@ button {
 
 .section-lede {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 1rem;
   max-width: 640px;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
-/* ---------- Work ---------- */
+/* ---------- Work (mobile first) ---------- */
 .project-featured {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-columns: minmax(0, 1fr);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .featured-media {
-  min-height: 100%;
+  aspect-ratio: 16 / 9;
 }
 .featured-media img {
   width: 100%;
@@ -563,7 +596,7 @@ button {
 }
 
 .featured-body {
-  padding: clamp(1.5rem, 3.5vw, 2.6rem);
+  padding: clamp(1.4rem, 4vw, 2.6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -579,7 +612,7 @@ button {
 
 .featured-title {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: clamp(1.4rem, 5vw, 2.1rem);
   letter-spacing: -0.02em;
   margin-bottom: 0.25rem;
 }
@@ -620,14 +653,14 @@ button {
 
 .work-subhead {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-size: clamp(1.15rem, 4.5vw, 1.5rem);
   letter-spacing: -0.01em;
-  margin: clamp(2.5rem, 4vw, 3.5rem) 0 1.5rem;
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 1.5rem;
 }
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.4rem;
 }
 
@@ -754,24 +787,24 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.35rem 0;
+  padding: 0.5rem 0;
 }
 .link-arrow:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* ---------- About ---------- */
+/* ---------- About (mobile first) ---------- */
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(2.5rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
   align-items: center;
 }
 
 .about-media {
   width: 100%;
-  max-width: 400px;
+  max-width: 340px;
   margin-inline: auto;
 }
 .about-media img {
@@ -814,10 +847,10 @@ button {
   padding-top: 1.2rem;
 }
 
-/* ---------- Skills ---------- */
+/* ---------- Skills (mobile first) ---------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.4rem;
 }
 
@@ -825,7 +858,7 @@ button {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.6rem 1.7rem;
+  padding: 1.5rem 1.5rem;
   transition: border-color 0.25s var(--ease);
 }
 .skill-card:hover {
@@ -859,10 +892,10 @@ button {
   color: var(--accent);
 }
 
-/* ---------- Experience & Education ---------- */
+/* ---------- Experience & Education (mobile first) ---------- */
 .exp-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
 }
@@ -871,7 +904,7 @@ button {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.7rem 1.8rem;
+  padding: 1.4rem 1.3rem;
   margin-bottom: 1.4rem;
   transition: border-color 0.25s var(--ease);
 }
@@ -881,7 +914,7 @@ button {
 
 .exp-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -889,7 +922,7 @@ button {
 }
 .exp-head h3 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   letter-spacing: -0.01em;
 }
 
@@ -914,7 +947,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .exp-card--part-time {
@@ -924,6 +957,7 @@ button {
 .exp-company {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   color: var(--muted);
   font-size: 0.9rem;
@@ -949,6 +983,7 @@ button {
 
 .exp-edu {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.2rem;
 }
 
@@ -980,11 +1015,11 @@ button {
   margin: 0.2rem 0 0.5rem;
 }
 
-/* ---------- Contact ---------- */
+/* ---------- Contact (mobile first) ---------- */
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
   align-items: start;
 }
 
@@ -1001,7 +1036,7 @@ button {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.1rem 1.2rem;
+  padding: 1rem 1.1rem;
   transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
 }
 a.info-card:hover {
@@ -1029,12 +1064,14 @@ a.info-card:hover {
   letter-spacing: 0.08em;
 }
 .info-value {
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 .contact-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: 0.2rem;
 }
@@ -1059,13 +1096,13 @@ a.info-card:hover {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.8rem;
+  padding: 1.5rem;
 }
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.1rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
 }
 
 .form-field {
@@ -1134,6 +1171,7 @@ a.info-card:hover {
 .form-hint strong {
   color: var(--text);
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .btn-submit {
@@ -1173,8 +1211,8 @@ a.info-card:hover {
 }
 
 .to-top {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1219,127 +1257,123 @@ a.info-card:hover {
   }
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 1024px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .hero {
-    padding-top: calc(var(--header-h) + 2.5rem);
-  }
-  .hero-media {
-    max-width: 380px;
-  }
+/* ==========================================================================
+   Progressive enhancement (mobile-first breakpoints)
+   ========================================================================== */
 
+/* Small phones → two-column form */
+@media (min-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+}
+
+/* Landscape phones & small tablets → roomier hero */
+@media (min-width: 641px) {
+  .btn-resume {
+    display: inline-flex;
+  }
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hero-actions .btn {
+    width: auto;
+  }
+}
+
+/* Tablets → two-column work grid and education */
+@media (min-width: 700px) {
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .exp-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .exp-edu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .about-media {
-    max-width: 360px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-featured {
-    grid-template-columns: 1fr;
-  }
-  .featured-media {
-    aspect-ratio: 16 / 9;
-  }
-}
-
-@media (max-width: 820px) {
+/* Desktop navigation replaces the checkbox menu */
+@media (min-width: 821px) {
   .menu-btn {
-    display: inline-flex;
-  }
-
-  .navbar {
-    position: absolute;
-    top: var(--header-h);
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.2rem;
-    background: var(--header-bg);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem clamp(1.25rem, 4vw, 2.5rem) 1.4rem;
     display: none;
   }
 
-  #nav-toggle:checked ~ .navbar {
+  .navbar {
+    position: static;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .navbar a {
-    padding: 0.95rem 0.7rem;
-    font-size: 1rem;
-    border-radius: 10px;
+    min-height: 44px;
+    font-size: 0.88rem;
+    padding: 0.5rem 0.75rem;
   }
 
   .header-actions {
-    margin-left: auto;
+    margin-left: 0;
   }
 }
 
-@media (max-width: 640px) {
+/* Two-column skills, about and featured project */
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .about-media {
+    max-width: 400px;
+  }
+
+  .project-featured {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+  .featured-media {
+    aspect-ratio: auto;
+  }
+}
+
+/* Laptops and up → multi-column hero, work, experience, contact */
+@media (min-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
   .work-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .hero-actions .btn {
-    width: 100%;
+  .exp-grid {
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
+  .contact-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 2.5rem;
   }
 
-  .btn-resume {
-    display: none; /* resume remains available in the hero */
-  }
-
-  .exp-card {
-    padding: 1.4rem 1.3rem;
-  }
-
-  .section {
-    padding-block: 4.5rem;
+  .contact-form {
+    padding: 1.8rem;
   }
 }
 
-@media (max-width: 380px) {
-  .hero-socials a,
-  .contact-socials a {
-    width: 42px;
-    height: 42px;
-  }
-  .info-card {
-    padding: 0.9rem 1rem;
+/* Short landscape screens (phones in landscape): avoid rigid full-screen hero */
+@media (max-height: 560px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-block: calc(var(--header-h) + 1.25rem) 2.5rem;
   }
 }

@@ -11,14 +11,14 @@
       name="description"
       content="Tilak Joshi is a Full-Stack Engineer building SaaS and business integrations: SAP Business One add-ons, web applications, API integrations and DevOps."
     />
-    <meta
-      name="keywords"
-      content="Tilak Joshi, Full-Stack Engineer, SAP Business One, SAP B1 Add-on, MERN, React, Node.js, SaaS, API Integrations, DevOps, Docker, Nepal"
-    />
     <meta name="author" content="Tilak Joshi" />
     <meta name="theme-color" content="#0b1220" />
 
+    <link rel="canonical" href="https://www.tilakjoshi.com.np/" />
     <link rel="icon" type="image/x-icon" href="assets/images/profile3.ico" />
+
+    <!-- Performance: preload the primary hero portrait (LCP) -->
+    <link rel="preload" as="image" href="assets/images/optimized/profile1.jpg" fetchpriority="high" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Tilak Joshi — Full-Stack Engineer | SaaS, SAP B1 &amp; Integrations" />
@@ -26,15 +26,27 @@
       property="og:description"
       content="I build business software that connects modern web applications with enterprise systems — from interfaces and APIs to integrations and deployment."
     />
-    <meta property="og:image" content="https://www.tilakjoshi.com.np/assets/images/img22.png" />
-    <meta property="og:url" content="https://www.tilakjoshi.com.np" />
+    <meta property="og:url" content="https://www.tilakjoshi.com.np/" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.tilakjoshi.com.np/assets/images/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tilak Joshi — Full-Stack Engineer. SaaS, SAP Business One, API Integrations, DevOps." />
 
-    <!-- Fonts -->
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tilak Joshi — Full-Stack Engineer | SaaS, SAP B1 &amp; Integrations" />
+    <meta
+      name="twitter:description"
+      content="I build business software that connects modern web applications with enterprise systems — from interfaces and APIs to integrations and deployment."
+    />
+    <meta name="twitter:image" content="https://www.tilakjoshi.com.np/assets/images/og-preview.png" />
+
+    <!-- Fonts (trimmed weights, display=swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -66,32 +78,55 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Tilak Joshi",
-        "url": "https://www.tilakjoshi.com.np",
-        "email": "mailto:me@tilakjoshi.com.np",
-        "telephone": "+9779863172583",
-        "sameAs": [
-          "https://www.linkedin.com/in/tilakjoshii",
-          "https://github.com/tilakjoshii",
-          "https://www.facebook.com/tilakjoshii",
-          "https://t.me/tilakjoshi"
-        ],
-        "jobTitle": "Full-Stack Engineer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Bizhub Consulting Service"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Tribhuvan University"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bhimdatta",
-          "addressRegion": "Kanchanpur",
-          "addressCountry": "Nepal"
-        }
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.tilakjoshi.com.np/#person",
+            "name": "Tilak Joshi",
+            "url": "https://www.tilakjoshi.com.np/",
+            "image": "https://www.tilakjoshi.com.np/assets/images/optimized/profile1.jpg",
+            "jobTitle": "Full-Stack Engineer",
+            "email": "mailto:t.joshi.dev@gmail.com",
+            "telephone": "+9779863172583",
+            "sameAs": [
+              "https://www.linkedin.com/in/tilakjoshii",
+              "https://github.com/tilakjoshii",
+              "https://www.facebook.com/tilakjoshii",
+              "https://t.me/tilakjoshi"
+            ],
+            "worksFor": [
+              { "@type": "Organization", "name": "Bizhub Consulting Service" },
+              { "@type": "Organization", "name": "Global Dairy" }
+            ],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Tribhuvan University"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bhimdatta",
+              "addressRegion": "Kanchanpur",
+              "addressCountry": "Nepal"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.tilakjoshi.com.np/#website",
+            "url": "https://www.tilakjoshi.com.np/",
+            "name": "Tilak Joshi — Full-Stack Engineer",
+            "description": "Portfolio of Tilak Joshi, Full-Stack Engineer building SaaS, SAP Business One add-ons, web applications, API integrations and DevOps.",
+            "publisher": { "@id": "https://www.tilakjoshi.com.np/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://www.tilakjoshi.com.np/#profile",
+            "url": "https://www.tilakjoshi.com.np/",
+            "name": "Tilak Joshi — Portfolio",
+            "isPartOf": { "@id": "https://www.tilakjoshi.com.np/#website" },
+            "about": { "@id": "https://www.tilakjoshi.com.np/#person" },
+            "mainEntity": { "@id": "https://www.tilakjoshi.com.np/#person" }
+          }
+        ]
       }
     </script>
   </head>
@@ -163,7 +198,7 @@
               <a href="https://www.linkedin.com/in/tilakjoshii" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                 <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
-              <a href="mailto:me@tilakjoshi.com.np" aria-label="Send email">
+              <a href="mailto:t.joshi.dev@gmail.com" aria-label="Send email">
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
               </a>
             </div>
@@ -206,7 +241,7 @@
                 alt="Screenshot of the TinyBee1 business platform"
                 width="1280"
                 height="721"
-                loading="lazy"
+                loading="lazy" decoding="async"
               />
             </div>
             <div class="featured-body">
@@ -297,7 +332,7 @@
                   alt="Screenshot of the Griha room finder application"
                   width="800"
                   height="451"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="project-body">
@@ -325,7 +360,7 @@
                   alt="Screenshot of the Green Peace WordPress website"
                   width="800"
                   height="451"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="project-body">
@@ -352,7 +387,7 @@
                   alt="Screenshot of the Neem Digital Services website"
                   width="800"
                   height="450"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="project-body">
@@ -454,7 +489,7 @@
                 alt="Tilak Joshi working portrait"
                 width="960"
                 height="1280"
-                loading="lazy"
+                loading="lazy" decoding="async"
               />
             </div>
 
@@ -491,7 +526,7 @@
               </ul>
 
               <p class="about-meta mono">
-                Based in Bhimdatta, Kanchanpur, Nepal · me@tilakjoshi.com.np
+                Based in Bhimdatta, Kanchanpur, Nepal · t.joshi.dev@gmail.com
               </p>
             </div>
           </div>
@@ -717,11 +752,11 @@
                   <span class="info-value">+977 9863172583</span>
                 </span>
               </a>
-              <a class="info-card" href="mailto:me@tilakjoshi.com.np">
+              <a class="info-card" href="mailto:t.joshi.dev@gmail.com">
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 <span>
                   <span class="info-label mono">Email</span>
-                  <span class="info-value">me@tilakjoshi.com.np</span>
+                  <span class="info-value">t.joshi.dev@gmail.com</span>
                 </span>
               </a>
               <div class="info-card">
@@ -751,7 +786,7 @@
             <form
               class="contact-form"
               id="contactForm"
-              action="mailto:me@tilakjoshi.com.np"
+              action="mailto:t.joshi.dev@gmail.com"
               method="post"
               enctype="text/plain"
               novalidate
@@ -783,7 +818,7 @@
               <p class="form-hint">
                 <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
                 This opens your email app. Your message is sent from your own email account to
-                <strong>me@tilakjoshi.com.np</strong> — please press send there.
+                <strong>t.joshi.dev@gmail.com</strong> — please press send there.
               </p>
 
               <button type="submit" class="btn btn-primary btn-submit">
@@ -808,6 +843,6 @@
       </div>
     </footer>
 
-    <script src="assets/javasc.js"></script>
+    <script src="assets/javasc.js" defer></script>
   </body>
 </html>

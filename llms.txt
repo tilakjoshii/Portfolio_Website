@@ -1,0 +1,49 @@
+# Tilak Joshi — Portfolio
+
+> Full-Stack Engineer building SaaS and business integrations.
+> SAP Business One · Web Applications · API Integrations · DevOps
+
+## About
+
+Tilak Joshi is a full-stack engineer based in Bhimdatta, Kanchanpur, Nepal.
+He builds business software end to end — from React and Next.js interfaces to
+Node.js APIs, databases, deployment pipelines, and SAP Business One add-ons and
+integrations.
+
+Email: t.joshi.dev@gmail.com
+
+## Experience
+
+- Senior MERN Stack Developer — Bizhub Consulting Service, Lalitpur, Nepal (Dec 2023 – Present)
+- Full Stack Developer (Part-time, Hybrid) — Global Dairy, Kathmandu, Nepal (Aug 2025 – Present)
+- Web Developer — Neem Infosys, Mahendranagar, Nepal (Apr 2022 – Oct 2023)
+
+Education: BSc. Computer Science & IT, Siddhanath Science Campus, Tribhuvan University (2019 – 2023).
+
+## Skills
+
+- Frontend: HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Tailwind CSS, Ant Design, Redux, responsive UI
+- Backend and APIs: Node.js, Express, REST APIs, Mongoose, Zod, JWT, OAuth 2.0, Webhooks, Socket.IO, BullMQ
+- Databases and Caching: MongoDB, PostgreSQL, MySQL, SQL Server, SAP HANA, Redis, Prisma
+- SAP and Business Integrations: SAP Business One, DI API, Crystal Reports, add-on development, Connect IPS, IRD CBMS, WhatsApp Cloud API, Meta Graph API, embedded signup
+- DevOps and Infrastructure: Docker, Docker Compose, Portainer, Nginx, GitHub Actions, Jenkins, Git, Linux, Windows Server, SSH, process management, backup and restore
+- AI and Current Learning: Gemini API, Qdrant, vector search, retrieval-augmented generation (learning/exploration, not model training)
+
+## Selected Projects
+
+- [DynoLocker](https://dynolocker.com/) — product website (description pending verification)
+- TinyBee1 — SAP Business One connected business platform
+- ChatPilot — WhatsApp Business messaging and integrations (AI features and additional channels are ongoing)
+- BizForce / BizForce360 — business applications and integrations
+- Griha — MERN stack room finder: https://griha.onrender.com/
+- Green Peace — WordPress theme: https://greenpeaceletang.com/
+- Neem Digital Services — agency website: https://tilakjoshii.github.io/neem-digital-services/
+- Connect IPS Integration — SAP Business One payment gateway integration
+- IRD CBMS Integration — automated tax invoice submission for SAP Business One
+
+## Public Links
+
+- Homepage: https://www.tilakjoshi.com.np/
+- GitHub: https://github.com/tilakjoshii
+- LinkedIn: https://www.linkedin.com/in/tilakjoshii
+- Resume: https://www.tilakjoshi.com.np/assets/tilak_resume_netern.pdf

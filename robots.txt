@@ -1,0 +1,7 @@
+# robots.txt for tilakjoshi.com.np
+# Static portfolio — public content; robots.txt is not a security boundary.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tilakjoshi.com.np/sitemap.xml
